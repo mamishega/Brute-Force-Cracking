@@ -1,6 +1,11 @@
 # Import necessary libraries
 import subprocess  # This library allows you to run external programs
 import csv  # This library allows you to work with CSV files
+import time
+
+# Record the start time of the program execution
+programStartTime = time.time()
+
 
 # Function to run the executable with a username and pin and return the output
 def runExe(username, pin):
@@ -34,3 +39,6 @@ for username in valid_usernames:
 # Print valid combinations
 for username, pin in valid_combinations:
     print(f"Valid Combination: Username='{username}', Pin='{pin}'")  # Display the valid combinations found
+
+# Calculate and print the time taken for the scan
+print('Time taken:', time.time() - programStartTime)
