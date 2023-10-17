@@ -40,5 +40,11 @@ for username in valid_usernames:
 for username, pin in valid_combinations:
     print(f"Valid Combination: Username='{username}', Pin='{pin}'")  # Display the valid combinations found
 
+
+
 # Calculate and print the time taken for the scan
 print('Time taken:', time.time() - programStartTime)
+
+# Call the runExe function with your values
+output= runExe(username, pin)
+print(output) # Print the result
